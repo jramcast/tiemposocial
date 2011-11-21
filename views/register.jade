@@ -1,0 +1,18 @@
+h1 Register
+- if (flash.warn)
+  p#warn= flash.warn
+
+form(action='/users', method='POST')
+  p
+    label(for='login') Username:
+    input(type='text', name='user[username]', id='user_username')
+  p
+    label(for='password') Password:
+    input(type='password', name='user[password]', id='user_password')
+  p
+    label(for='password') e-mail:
+    input(type='text', name='user[email]', id='user_email')
+  p
+    input(type='submit') 
+    
+

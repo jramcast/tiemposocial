@@ -1,0 +1,75 @@
+
+!!!
+html
+  head    
+    title!= title
+    link(rel='stylesheet', href='/stylesheets/reset.css')    
+    link(rel='stylesheet', href='/stylesheets/grid.css')
+    link(rel='stylesheet', href='/stylesheets/general.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src= 'http://code.jquery.com/jquery.min.js')
+    - if (typeof(scripts) != 'undefined')
+      each script in scripts 
+        script(type='text/javascript', src= script)
+        
+    |<script type="text/javascript">    
+    |	var _gaq = _gaq || [];
+    |	_gaq.push(['_setAccount', 'UA-27187705-1']);
+    |	_gaq.push(['_trackPageview']);    
+    |	(function() {
+    |		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    |		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    |		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    |		})();
+    |</script>
+  body
+    div#background
+      header
+        |<div class="titlebar shadowed">
+        |<div class="row"> 
+        |	<a href="/"class="logo col col_6"></a>
+        |	</div>
+        |<div class="clear"></div><!-- clear -->
+        |<nav class="menubar">
+        |	<div class="row"> 
+        |  		<ul class='col col_16'> 
+        |    			<li class="first"><a href="/">Volver a la busqueda</a></li> 
+        |             	<li><a target="_blank" href="http://www.itknowingness.com">Blog</a></li> 
+        |             	<li><a target="_blank" href="http://jaimeramirez.heroku.com">@jramcast</a></li>
+        |       </ul>
+        |   </div>
+        |</nav>
+
+
+    
+      section#main.row.main!= body
+    
+    div#footer_shadow.shadowed
+    |<footer>
+    | <div class='row'>
+    |	<div id='footer_copyright' class='col col_6'>
+    |	<h4>En la cocina</h4>
+    |		<a target="_blank" href="http://jaimeramirez.heroku.com">Jaime Ramírez</a> de 
+    |		<a target="_blank" href="http://www.itknowingness.com">ITKnowingness</a> <br />
+    |   	<a target="_blank" href="http://twitter.com/jramcast">@jramcast</a> <br />
+    |   	<a target="_blank" href="http://twitter.com/itknowingness">@itknowingess</a> <br />
+    |	</div>
+    |	<div class='col col_4'>
+    |		<h4>Utensilios</h4>
+    |		<ul id='footer_technologies_list'>
+    |		<li><a target="_blank" href='http://nodejs.org/'>NodeJS</a></li>
+    |		<li><a target="_blank" href='http://expressjs.com/'>Express</a></li>
+    |		<li><a target="_blank" href='http://socket.io/'>Socket.io</a></li>
+    |		
+    |		</ul>
+    |	</div> 
+    |	<div class='col col_5'>
+    |		<h4>Ingredientes</h4>
+    |		<p> La información sobre localizaciones y estaciones meteorológicas viene a través
+    |			de las APIS de <a target="_blank" href='http://www.wunderground.com'>Weather Undeground</a>
+    |			y <a target="_blank" href='http://www.geonames.org/'>Geonames</a>. La Streaming API de Twitter provee
+    |			los comentarios en tiempo real.
+    |		</p>
+    |	</div>
+    |</div>   
+    |</footer>

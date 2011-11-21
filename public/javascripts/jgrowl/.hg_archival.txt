@@ -1,0 +1,5 @@
+repo: b2e203ba54c672923a896ef4150705f6307e490c
+node: 6b0f2bba28282c6010dea5d7f765620aee20b0d2
+branch: default
+latesttag: jgrowl-1_2_5
+latesttagdistance: 10

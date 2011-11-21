@@ -1,0 +1,35 @@
+div#app_info.box.hide 
+  p  Una cosa: Nubloo está en fases tempranas de desarrollo y es posible que tenga comportamientos erróneos. 
+    | Os animo a que me hagáis llegar cualquier crítica, sugerencia, apoyo con el desarrollo, o lo que se os ocurra a
+    |  <a target="_blank" href="http://twitter.com/jramcast">@jramcast</a>. Toda ayuda es bienvenida! :)
+
+h2#place_info Buscando  
+ span#search_string!= place
+ span.dots  
+ 
+div#other_results.width_8.hide.box.shadowed
+  p(onclick='showOtherResults();') ¿No es lo que andabas buscando? Mira otros resultados
+  ul
+
+div.clear
+section     
+  div#place_info
+  
+  div#twitter_stream_box.col.col_10.hide.box.shadowed
+    h3 Lo que se dice en la zona
+    div#twitter-stream
+      ul#tweets        
+      ul#previous_tweets 
+        li#waiting_message Esperando nuevas noticias
+          span.dots
+  
+  div#weather_box.col.col_6.hide.box.shadowed
+    div.row
+      h3 El tiempo ahora
+      div#weather_observation
+    div.row
+      h3 Otras estaciones cercanas   
+      ul#weather_stations_list 
+      
+
+

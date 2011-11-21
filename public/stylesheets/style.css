@@ -1,0 +1,355 @@
+h2 {
+	font-weight: normal;
+	color:#333; 
+	font-size: 2.52em; 
+	margin-bottom: 10px;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25), -2px 0 1px rgba(0, 0, 0, 0.25) !important;
+}
+h3{font-weight: normal; color:#9a9a9a; margin-top:10px;}
+h3.first{margin-top:10px}
+h4{font-weight: normal; color:#363636; font-size: 1.4em; font-style: italic;	}
+strong {color: #000;}
+a {	color:#116676;	}
+a:hover, a:focus { text-decoration:underline;}
+a:active, a:visited { }
+
+body {background-color: #252525;}
+#background {background-color: #bce7fb;}
+#main {background-color: #bce7fb;min-height: 300px;
+}
+
+
+header{margin-bottom: 20px;}
+
+	header .titlebar {
+		background-color: #252525; border-bottom: 1px solid #999;
+	}
+	header .logo {
+		background-image: url('../images/logo.png');
+		background-repeat: no-repeat;		
+		height: 100px;
+	}
+
+	header .menubar {background-color: #4398b4; padding: 0px 0px 0px 0px; display:none;}
+	header .contact_buttons {padding-top: 20px;}
+	header nav ul li {float:left; display:block; margin-right: 20px;}
+	header nav ul li a {display:block; font-size:1.2em; color:#fff; text-decoration: none;}
+	header nav ul li a:hover {text-decoration: underline;}
+	header nav ul li.first {margin-left: 0px;}
+	
+
+footer {
+	color:#acacac;
+	background-color: #252525;
+	font-size:0.9em;
+	padding-top: 10px;
+	/*min-height:100%;	*/	
+}
+
+footer a {
+	color:#666;
+}
+
+footer h4 {
+	color:#555;
+}
+
+
+
+.shadowed{
+	-moz-box-shadow: 0px 0px 10px #777;
+	-webkit-box-shadow: 0px 0px 10px #777;
+	box-shadow: 0px 0px 10px #777;	
+}
+			
+.row {padding: 15px 15px 15px 15px;}
+
+.date
+{	
+	color:#6a6a6a;
+	margin-top: 10px;
+}
+
+/* -- index page*/
+
+#search_form {
+	font: 20px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	color: #eee;
+	background-color: #252525;
+	padding: 20px;
+	margin-bottom: 20px;
+	moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #999;
+}
+
+
+
+#introduction {height:100%;}
+
+#introduction p{ 
+	text-align: justify;	
+	font-weight: normal;
+	color: #555;
+	font-size: 18px; /*'Helvetica Neue', Arial, Helvetica, sans-serif;*/
+}
+#place_search_label {
+	font-size: 1em;
+	
+}
+
+#place_search_name {
+	margin: 20px;
+	font: 20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	height: 40px;
+	width: 300px;
+}
+#place_search_button {
+	background-color: #ff8f40;
+	padding-left:15px;
+	padding-right:15px;
+	margin: 20px;
+	font: 20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	color: #333;
+	height: 40px;	
+	moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px outset buttonface;
+}
+
+#place_search_button:hover {
+	background-color: #ff6a00;
+}
+
+#place_search_button:active {
+	border: 1px inset buttonface;
+}
+
+.button_efect {
+	border: 0 !important;
+	cursor: pointer !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	line-height: 1 !important;
+	position: relative !important;
+	text-align: cente !important;
+	text-decoration: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25), -2px 0 1px rgba(0, 0, 0, 0.25) !important;
+	border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .2), rgba(150, 150, 150, .2), rgba(0, 0, 0, .0)) !important;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .2)), color-stop(0.5, rgba(150, 150, 150, .2)), to(rgba(0, 0, 0, .0))) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle !important;
+	position: relative;
+	zoom: 1;
+	-moz-user-select: none;
+}
+
+
+/* -- places page*/
+
+#search_string {
+	font-style: italic;
+}
+
+
+#app_info  {
+	color: #dedede;
+	padding: 1em;
+	background-color: #252525;
+	margin-bottom:30px;
+}
+#app_info p {
+	margin-bottom: 0px;
+	font-size: 90%;
+}
+
+
+#other_results  {
+	/*color: #555;
+	background-color: #f5f5f5;
+	border: 1px solid #bbb;
+	moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;	
+	margin-bottom:30px;
+	display: none;*/
+	color: #ddd;
+	margin-bottom:30px;
+}
+#other_results p  {
+	padding: 0.5em;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+#other_results p:hover  {
+	background-color: #333;
+}
+
+#other_results ul {
+	display: none;
+	/*opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);*/
+}
+
+#other_results ul li {
+	cursor: pointer;
+	font-size: 95%;
+}
+
+#other_results ul li:hover{
+	text-decoration: underline;
+}
+
+
+
+.box {
+	moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #999;
+	background-color: #252525;
+	/* Un pixel menos por cada lado por el borde*/
+	margin-left: 9px;
+	margin-right: 9px;
+}
+
+.box h3{	
+	padding: 10px;
+	margin: 0px;
+}
+
+.nohmargin{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#weather_box .row{
+	padding: 0px 10px 0px 10px;
+	width: inherit;
+}
+
+#weather_observation {
+	/*background: #efefef;*/
+	background-color: #ffe6cb;
+	font-size: 90%;
+	padding:10px;
+}
+
+.weather_obs_temperature {
+	font: 38px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	margin-bottom:10px;
+}
+
+.weather_obs_conditions {
+	font: 24px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	margin-bottom:10px;
+}
+
+.list_no_style {
+	list-style: none;
+	margin-left: 0px;	
+}
+
+
+.weather_station_name {		
+	cursor: pointer;
+	padding: 10px 0px 4px 10px;
+	color: #cecece;	
+	background: #252525;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #444;
+	font-size: 1.2em;
+}
+
+.weather_station_name:hover {
+	background: #333;
+}
+
+.weather_station_details {
+	display: none;
+	/*background-color: #efefef;*/
+	font-size: 90%;
+	background-color: #ffe6cb;
+}
+.weather_station_details li{
+	margin-left: 10px;
+	padding-top: 4px;
+}
+
+
+
+#twitter-stream {
+  //height: 450px;
+  /*overflow: hidden;*/
+  /*overflow: scroll;*/
+  /*margin: 20px auto;*/
+  border: 1px solid #ccc;
+}
+
+
+
+#twitter-stream ul li{
+  	list-style: none;
+	padding: 15px 15px 15px 15px;
+	margin-left: 0px;
+	font-size: 1.1em;
+	background-color: #f1f1ff;
+	text-align: left;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+	
+}
+
+#twitter-stream .row{
+	padding: 0px;
+}
+
+
+#previous_tweets li#waiting_message{
+	padding-left: 18px;	
+}
+
+.tweet_text{
+	font-size: 0.9em;	
+}
+
+.tweet_date {
+	text-align: right;
+}
+
+.tweet_date, .tweet_user, .tweet_location{
+	font-size: 0.7em;
+	font-style: italic;	
+	color: #a66f34;	
+}
+
+
+.techonolgy_logo{
+	height:50px;
+}
+
+#footer_shadow {
+	height:10px;
+}
+
+#footer_technologies_list li{
+}
+
+#footer_copyright {
+	
+	
+}

@@ -1,0 +1,9 @@
+- var publications= place.getPublications();
+
+p
+  label(for='publication_text') How's the weather?':
+
+input(type='text', id='publicationInputBox', placeholder='waiting for connection...', DISABLED)
+div(id='publicationsBox')
+  each p in publications
+    div.publicationInList!= p.getModel().text
