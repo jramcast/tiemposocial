@@ -1,4 +1,4 @@
-var server = 'http://ec2-176-34-198-192.eu-west-1.compute.amazonaws.com';
+var server = 'http://176.34.251.166';
 // 'http://192.168.1.35:3000';
 var socket = io.connect(server);
 
