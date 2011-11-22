@@ -1,4 +1,4 @@
-var server = 'http://nuublo.nodester.com';
+var server = 'http://ec2-176-34-198-192.eu-west-1.compute.amazonaws.com';
 // 'http://192.168.1.35:3000';
 var socket = io.connect(server);
 
