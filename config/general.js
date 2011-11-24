@@ -12,7 +12,7 @@ module.exports = function(app,express)
 		app.use(express.cookieParser()); 
 		app.use(express.session({ store: new MemStore({ reapInterval: 60000 * 10 }) , secret:"ojetemoreno"}));
 		app.use(app.router);
-		app.use(express.static(__dirname + '/../public'));	
+		app.use(express.static(__dirname + '/../public'));		
 		process.env.APP_NAME = 'Nuublo';
 	});
 	
@@ -26,6 +26,5 @@ module.exports = function(app,express)
 		flash: function(req, res){
 			return req.flash();
 		}
-	}
-	);
+	});
 }

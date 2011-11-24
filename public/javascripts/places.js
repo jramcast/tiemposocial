@@ -8,7 +8,7 @@ Places.checkSearchedPlace = function() {
 Places.listen = function() {
 	socket.on('placeCheckedInGeoNames', function(data) {	
 			Places.showPlaceName(data[0]);
-			Places.showAlternativeResults(data);
+			Places.setAlternativeResults(data);
 			showContent();						
 	});	  
 	    	
@@ -22,7 +22,7 @@ Places.showPlaceName = function(p) {
 	Stations.requestWUStations(p.lat, p.lng);
 };
 
-Places.showAlternativeResults = function(data) {
+Places.setAlternativeResults = function(data) {
 	if(data.length > 1)
 	{
 		$("#other_results").css({display:'block'});
@@ -31,8 +31,27 @@ Places.showAlternativeResults = function(data) {
 			if(i!=0){
 				var place = data[i];
 				var placeName = place.name + ', ' + place.adminName1 + ', ' + place.countryName;
-				$("<li onclick='requestOtherPlace("+ i +");'></li>").html(placeName).appendTo("#other_results ul");
+				$("<li onclick='Places.requestOtherPlace("+ i +");'></li>").html(placeName).appendTo("#other_results ul");
 			}								
 		}
 	}
 };
+
+Places.requestOtherPlace = function(i) {	
+	socket.emit('want_another_place', { placeIndex: i});
+	
+};
+
+Places.showOtherResults = function() {
+		
+		var otherResults = $("#other_results ul");
+		if(otherResults.is(":hidden"))	{
+			otherResults.slideDown("fast");
+		}
+		else {
+			otherResults.slideUp("fast");
+		}
+		//	$("#other_results ul").css({opacity:0}).slideDown('fast').animate({opacity:1},"fast");
+};
+
+

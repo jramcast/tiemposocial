@@ -15,46 +15,35 @@ BrowserLocator.prototype.locate = function()
 
 
 BrowserLocator.prototype._showPlace = function(latitude, longitude) {
+	//http://api.geonames.org/findNearbyPlaceNameJSON?lat=47.3&lng=9&username=jramcast
 	
 	var self = this;
-	var baseUri = "http://where.yahooapis.com/v1/places.q";
-	var coordinates = "('" + latitude + "," + longitude + "')?";
-	var options = "format=json&lang=es&";
-	var appId = "appid=wR9ADuzV34E1W3mPBYz_3bTOkB1LWR3f_8Cj.eNl4PRzmDQAJ5kBuu.H.FeCZfx6ObJ9XiVKsxaR_njfIyeSqVuFjOfBViA";
-	var requestUri = baseUri + coordinates + options + appId;
+	var baseUri = "http://api.geonames.org/findNearbyPlaceNameJSON";
+	var coordinates = "lat=" + latitude + "&lng=" + longitude;
+	var username = "username=jramcast";
+	var options = "lang=es"
+	var requestUri = baseUri + '?'+ coordinates + '&' + username + '&' + options;
 	
 	$.get(requestUri, function(data){
-		var place = data.places.place[0];
-		var msj = 'O echa un vistazo al tiempo en ' + self.generatePlaceLink(place);
-	 	$("#your_location").html(msj);
-	
-	
-		//Neighbours
-		/*var baseUri = "http://where.yahooapis.com/v1/place/";
-		var woeid = place.woeid +'/neighbors?';
-		var requestUri = baseUri + woeid  + options + appId;
-		$.get(requestUri, function(data){
-			$("#your_location").append('<p>Or maybe in in :</p>' );		
-			for(i in data.places.place)
-			{
-				place = data.places.place[i];			
-				var woeid = place.woeid +'?';
-				var requestUri = baseUri + woeid + options + appId;
-				$.get(requestUri, function(data){
-					place = data.place;
-				 	$("#your_location").append('<p>' + place.locality2 + " " + place.locality1 + '</p>' );				
-				});			
-			}	
-		});*/
-	
-	});
+		var place = data.geonames[0];
+		if(place.name){
+			var msj = 'O echa un vistazo al tiempo en ' + self.generatePlaceLink(place);
+		 	$("#your_location").html(msj);
+		}		
+	}, 'json');
 
 };
 
 BrowserLocator.prototype.generatePlaceLink = function(place)
 {
-	var placeName = place.locality1;
-	return "<a href='places/search/" + placeName + "'>" + place.locality2 + " " + place.locality1 + ", " + place.country + "</a>";
+	var searchTerm = place.name;
+	var comma = '';
+	if(place.countryName)
+	{
+		searchTerm += '%20' + place.countryName;
+		comma = ', '
+	}
+	return "<a href='places/search/" + searchTerm + "'>" + place.name + comma + place.countryName + "</a>";
 }
 
 

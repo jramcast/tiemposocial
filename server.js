@@ -6,6 +6,7 @@ var SocketsManager = require('./lib/socketsmanager');
 var TwitterNode = require("twitter-node").TwitterNode;
 var Common = require('./lib/common');
 
+
 // Configuration
 require('./config/config.js')(app, express);
 
@@ -29,9 +30,9 @@ module.exports.twitterNode = twitterNode;
 Router.createRoutes(app);
 
 /*catch any exception*/
-process.on('uncaughtException', function (err) {
+/*process.on('uncaughtException', function (err) {
   console.log('Caught exception: ' + err);
-});
+});*/
 
 //Start Server App
 if(!module.parent) {
