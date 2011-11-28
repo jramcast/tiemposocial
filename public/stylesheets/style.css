@@ -350,10 +350,9 @@ footer h4 {
 	height:10px;
 }
 
-#footer_technologies_list li{
-}
 
-#footer_copyright {
-	
+#footer_copyright li{
+	list-style-type: none;
+	margin-left: 0px;
 	
 }

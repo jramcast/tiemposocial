@@ -5,10 +5,19 @@ var Router = require('./lib/router.js');
 var SocketsManager = require('./lib/socketsmanager');
 var TwitterNode = require("twitter-node").TwitterNode;
 var Common = require('./lib/common');
-
+var i18n = module.exports.i18n = require("i18n");
 
 // Configuration
 require('./config/config.js')(app, express);
+
+//Config i18n
+i18n.configure({
+    locales:['en', 'es'],
+});
+
+/*Initialize TwitterNode*/
+var twitterNode  = new TwitterNode(config);
+module.exports.twitterNode = twitterNode;
 
 /*Initialize Socket.IO*/
 var socketManager = SocketsManager.createWithAppReference(app);
@@ -21,18 +30,18 @@ var config = {
 	password: "kfu73pKeID"
 };
 
-var twitterNode  = new TwitterNode(config);
 
 module.exports.socketManager = socketManager;
-module.exports.twitterNode = twitterNode;
+
+
 
 /* Set Routes */
 Router.createRoutes(app);
 
 /*catch any exception*/
-/*process.on('uncaughtException', function (err) {
+process.on('uncaughtException', function (err) {
   console.log('Caught exception: ' + err);
-});*/
+});
 
 //Start Server App
 if(!module.parent) {

@@ -1,7 +1,7 @@
 var TestCommon = require('./testcommon'),
 	testConfig = TestCommon.config,
 	should = TestCommon.should;
-var app = require('../app'),
+var app = require('../server'),
     assert = require('assert');
 
 
@@ -14,7 +14,7 @@ module.exports = {
 				method: 'GET'
 			},
 			function(res) {				
-				res.body.should.include.string('Node.js');
+				res.body.should.include.string('place_search_label');
 			});
 	},
 

@@ -1,6 +1,6 @@
 var SocketsManager = require('../lib/socketsmanager');
 var TwitterFeeder = require('../lib/twitterfeeder');
-var app = require('../app');
+var app = require('../server');
 var Io = require('socket.io')
 var TestCommon = require('./testcommon'),
 	testConfig = TestCommon.config,

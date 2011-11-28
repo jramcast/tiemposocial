@@ -1,6 +1,7 @@
 var server = 'http://' + location.host;
 var socket = io.connect(server);
 
+
 window.onload = function(){		
 	setListeners();
 	runVisuals();
@@ -8,6 +9,17 @@ window.onload = function(){
 }
 
 var setListeners = function() {
+	
+	socket.on("connect",function() {
+		$("#status").html("En directo");
+	});
+	
+	socket.on("disconnect", function() {
+		$("#status").html("Desconectado");
+	});
+	
+	
+	
 	var tweets = new Tweets();
 	tweets.listen();	
 	Places.listen();			

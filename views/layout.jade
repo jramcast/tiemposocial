@@ -25,51 +25,48 @@ html
   body
     div#background
       header
-        |<div class="titlebar shadowed">
-        |<div class="row"> 
-        |	<a href="/"class="logo col col_6"></a>
-        |	</div>
-        |<div class="clear"></div><!-- clear -->
-        |<nav class="menubar">
-        |	<div class="row"> 
-        |  		<ul class='col col_16'> 
-        |    			<li class="first"><a href="/">Volver a la busqueda</a></li> 
-        |             	<li><a target="_blank" href="http://www.itknowingness.com">Blog</a></li> 
-        |             	<li><a target="_blank" href="http://jaimeramirez.heroku.com">@jramcast</a></li>
-        |       </ul>
-        |   </div>
-        |</nav>
-
+        div.titlebar.shadowed
+          div.row 
+            a.logo.col.col_6(href="/")
+            div.clear
+        nav.menubar
+          div.row
+            ul.col.col_16 
+              li.first
+                a(href="/")= _t("Volver a la busqueda")
+              li
+                a(href="http://www.itknowingness.com") Blog
+              li
+                a(href="http://jaimeramirez.heroku.com") @jramcast
+            div.clear
 
     
       section#main.row.main!= body
     
     div#footer_shadow.shadowed
-    |<footer>
-    | <div class='row'>
-    |	<div id='footer_copyright' class='col col_6'>
-    |	<h4>En la cocina</h4>
-    |		<a target="_blank" href="http://jaimeramirez.heroku.com">Jaime Ramírez</a> de 
-    |		<a target="_blank" href="http://www.itknowingness.com">ITKnowingness</a> <br />
-    |   	<a target="_blank" href="http://twitter.com/jramcast">@jramcast</a> <br />
-    |   	<a target="_blank" href="http://twitter.com/itknowingness">@itknowingess</a> <br />
-    |	</div>
-    |	<div class='col col_4'>
-    |		<h4>Utensilios</h4>
-    |		<ul id='footer_technologies_list'>
-    |		<li><a target="_blank" href='http://nodejs.org/'>NodeJS</a></li>
-    |		<li><a target="_blank" href='http://expressjs.com/'>Express</a></li>
-    |		<li><a target="_blank" href='http://socket.io/'>Socket.io</a></li>
-    |		
-    |		</ul>
-    |	</div> 
-    |	<div class='col col_5'>
-    |		<h4>Ingredientes</h4>
-    |		<p> La información sobre localizaciones y estaciones meteorológicas viene a través
-    |			de las APIS de <a target="_blank" href='http://www.wunderground.com'>Weather Undeground</a>
-    |			y <a target="_blank" href='http://www.geonames.org/'>Geonames</a>. La Streaming API de Twitter provee
-    |			los comentarios en tiempo real.
-    |		</p>
-    |	</div>
-    |</div>   
-    |</footer>
+      footer
+        div.row
+          div.col.col_5
+            h4= _t("En la cocina")
+            ul#footer_copyright
+              li 
+                a(href="http://jaimeramirez.heroku.com") Jaime Ramírez
+                span= _t(" de ")
+                a(href="http://www.itknowingness.com") ITKnowingness
+              li 
+                a(href="http://twitter.com/jramcast") @jramcast
+              li
+                a(href="http://twitter.com/itknowingness")@itknowingess
+                
+          div.col.col_4
+            h4= _t("Utensilios")
+            ul#footer_technologies_list
+              li
+                a(href="http://nodejs.org/") NodeJS
+              li
+                a(href="http://expressjs.com/") Express
+              li
+                a(href="http://socket.io/") Socket.io
+          div.col.col_5
+            h4= _t("Ingredientes")
+            p!= _t("footer_data_sources")

@@ -11,9 +11,11 @@ module.exports = function(app,express)
 		app.use(express.methodOverride());
 		app.use(express.cookieParser()); 
 		app.use(express.session({ store: new MemStore({ reapInterval: 60000 * 10 }) , secret:"ojetemoreno"}));
+		app.use(app.i18n.init);
 		app.use(app.router);
 		app.use(express.static(__dirname + '/../public'));		
 		process.env.APP_NAME = 'Nuublo';
+		
 	});
 	
 	app.dynamicHelpers (
@@ -26,5 +28,9 @@ module.exports = function(app,express)
 		flash: function(req, res){
 			return req.flash();
 		}
+	});
+	
+	app.helpers({
+	  _t: app.i18n.__
 	});
 }
