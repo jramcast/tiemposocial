@@ -8,7 +8,7 @@ var config = {user: "jramcast", password: "ninonino83", action: "filter", track:
 
 
 module.exports = {		
-	/*"searchByName(placeName)" : function(beforeExit, assert) 
+	"searchByName(placeName)" : function(beforeExit, assert) 
 	{				
 		var twitterSearcher = new TwitterSearcher();
 		var results = null;
@@ -52,7 +52,7 @@ module.exports = {
 				should.exist(results[i].created_at);
 			}				
 		});		
-	},*/
+	},
 	
 	
 	"sortTweetList" : function(attribute){

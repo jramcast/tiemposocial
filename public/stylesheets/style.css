@@ -5,7 +5,12 @@ h2 {
 	margin-bottom: 10px;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0px 0 2px rgba(0, 0, 0, 0.25) !important;
 }
-h3{font-weight: normal; color:#9a9a9a; margin-top:10px;}
+h3{
+	font-weight: 500; 
+	color:#9a9a9a; 
+	margin-top:10px;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+}
 h3.first{margin-top:10px}
 h4{font-weight: normal; color:#363636; font-size: 1.4em; font-style: italic;	}
 strong {color: #000;}
@@ -16,7 +21,18 @@ a:active, a:visited { }
 body {
 	background-color: #252525;
 	color: #454545;
-	font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	/*font-family: 'Myriad Pro', 'Helvetica Neue', Arial, sans-serif;*/
+}
+
+body, input {
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.625;	
+}
+
+input {
+	background-color: #eee;
 }
 #background {background-color: #bce7fb;}
 #main {background-color: #bce7fb;min-height: 300px;
@@ -77,16 +93,19 @@ footer h4 {
 /* -- index page*/
 
 #search_form {
-	font: lighter 20px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font:  20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 200;
 	letter-spacing: 1px;
 	color: #eee;
 	background-color: #252525;
+	background: #252525 url('../images/cloud.png') no-repeat center right;
 	padding: 20px;
 	margin-bottom: 20px;
 	moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border: 1px solid #999;
+	
 }
 
 
@@ -95,9 +114,13 @@ footer h4 {
 
 #introduction p{ 
 	text-align: justify;	
-	font-weight: normal;
-	color: #555;
-	font-size: 18px; /*'Helvetica Neue', Arial, Helvetica, sans-serif;*/
+	font-weight: 400;
+	line-height: 23px;
+	color: #373737;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+	font: 17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.625;
 }
 #place_search_label {
 	font-size: 1em;
@@ -218,6 +241,9 @@ footer h4 {
 	text-decoration: underline;
 }
 
+#status {
+	color: #933;
+}
 
 
 .box {
@@ -254,12 +280,12 @@ footer h4 {
 }
 
 .weather_obs_temperature {
-	font: lighter 38px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 38px;
 	margin-bottom:10px;
 }
 
 .weather_obs_conditions {
-	font: lighter 24px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 24px;
 	margin-bottom:10px;
 }
 
@@ -294,48 +320,118 @@ footer h4 {
 	padding-top: 4px;
 }
 
-
-
-#twitter-stream {
-  //height: 450px;
-  /*overflow: hidden;*/
-  /*overflow: scroll;*/
-  /*margin: 20px auto;*/
-  border: 1px solid #ccc;
+#publicationInputArea{
+	width: 100%;
+	padding: 15px;
+	background-color: #f1f1f5;
+	border: 1px solid #eee;
 }
 
+#publicationInputBox{
+	font-size:16px;
+	color: #454545;
+	background-color: #fefefe;
+	padding: 10px;
+	moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	width: 430px;
+}
 
-
-#twitter-stream ul li{
-  	list-style: none;
-	padding: 15px 15px 15px 15px;
-	margin-left: 0px;
-	font-size: 1.1em;
-	background-color: #f1f1ff;
-	text-align: left;
-	border-bottom: 1px solid #ccc;
-	border-top: 1px solid #fff;
+#nearby {
+	color: #ee7f20;;
+	font-size: 85%;
+	margin-top: 10px;
+	width: 430px;
 	
 }
 
-#twitter-stream .row{
+#nearby span {
+	font-style: italic;
+}
+
+#nearby  strong {
+	color: inherit;
+}
+
+#publications-stream {
+  /*height: 450px;*/
+  /*overflow: hidden;*/
+  /*overflow: scroll;*/
+  /*margin: 20px auto;*/
+	border-top: 1px solid #ccc;
+}
+
+
+
+#publications-stream ul li{
+  	list-style: none;	
+	margin-left: 0px;
+	
+}
+
+#user_publication_button {
+	padding: 10px;
+	font-size: 110%;
+	background-color: #EFEFEF;
+	color: #777;
+	margin-left: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	cursor: pointer;
+	font-weight: bold;
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .2), rgba(150, 150, 150, .2), rgba(0, 0, 0, .0)) !important;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .2)), color-stop(0.5, rgba(150, 150, 150, .2)), to(rgba(0, 0, 0, .0))) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
+	
+}
+
+#user_publication_button:hover {
+	background-color: #cfcfcf;
+	color:#555;
+}
+
+
+.publication {
+	padding: 15px 25px 15px 15px;		
+	font-size: 1.1em;
+	text-align: left;
+	background-color: #f1f1ff;
+}
+
+.tweet {
+	
+	background: #eef2f7 url('../images/twitter16.png') no-repeat 99% 9%;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+}
+
+.user_publication {
+
+	background: #f9f9f9 url('../images/icon20.png') no-repeat 99% 9%;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #fff;
+}
+
+
+#publications-stream .row{
 	padding: 0px;
 }
 
 
-#previous_tweets li#waiting_message{
-	padding-left: 18px;	
-}
 
-.tweet_text{
+.publication_text{
 	font-size: 0.9em;	
 }
 
-.tweet_date {
+.publication_date {
 	text-align: right;
 }
 
-.tweet_date, .tweet_user, .tweet_location{
+.publication_date, .publication_user, .publication_location{
 	font-size: 0.7em;
 	font-style: italic;	
 	color: #a66f34;	

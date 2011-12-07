@@ -5,33 +5,31 @@ var Router = require('./lib/router.js');
 var SocketsManager = require('./lib/socketsmanager');
 var TwitterNode = require("twitter-node").TwitterNode;
 var Common = require('./lib/common');
-var i18n = module.exports.i18n = require("i18n");
+var ClientFactory = require('./lib/clientfactory');
 
 // Configuration
 require('./config/config.js')(app, express);
 
-//Config i18n
-i18n.configure({
-    locales:['en', 'es'],
-});
 
+
+////////// SINGLETONS ///////////////////////////////////////////
 /*Initialize TwitterNode*/
-var twitterNode  = new TwitterNode(config);
-module.exports.twitterNode = twitterNode;
-
-/*Initialize Socket.IO*/
-var socketManager = SocketsManager.createWithAppReference(app);
-
-/*Initialize Twitter Stream*/
 var config = {	
 	action: "filter", 
 	track: Common.twitterStreamKeywords,
 	user: "itknowingness",
 	password: "kfu73pKeID"
 };
+var twitterNode  = new TwitterNode(config);
+
+/*Initialize Client Factory*/
+var clientFactory = new ClientFactory(twitterNode);
+module.exports.clientFactory = clientFactory;
 
 
-module.exports.socketManager = socketManager;
+/*Initialize Socket.IO*/
+var socketManager = SocketsManager.createWithAppReference(app);
+/////////////////////////////////////////////////////
 
 
 

@@ -18,6 +18,7 @@ Places.listen = function() {
 };
 
 Places.showPlaceName = function(p) {
+	place = p.name;
 	$("#place_info").html(p.name + ', ' + p.adminName1 + ', ' + p.countryName);
 	Stations.requestWUStations(p.lat, p.lng);
 };

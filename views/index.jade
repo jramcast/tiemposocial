@@ -1,15 +1,20 @@
 div#search_form.shadowed
   form(action='/places/search', method='POST')
-    label(for='place_search', id='place_search_label')= _t("Qué se dice del tiempo en...")
-    input(type='text', name='place[search_string]', id='place_search_name', placeholder= _t("por ejemplo: Madrid")) ?  
-    input(type='submit', id='place_search_button', class='button_efect',value= _t("Busca!"))
+    label(for='place_search', id='place_search_label') Qué se dice del tiempo en...
+    input(type='text', name='place[search_string]', id='place_search_name', placeholder= "por ejemplo: Madrid") ?  
+    input(type='submit', id='place_search_button', class='button_efect',value= "Busca!")
   
   div#your_location  
 div#introduction
-  p!= _t("intro_text1")
-  p= _t("intro_text2")
-  h3= _t("Algunos apuntes técnicos")
-  p!= _t("intro_technical")
+  p 	
+    |Nuublo es un experimento que intenta seguir, en vivo, el estado del tiempo en un lugar concreto desde un punto de vista <strong>social</strong>
+  p
+    |Y con social me refiero a las socorridas conversaciones que la gente tiene sobre el tiempo, en este caso, en la red social Twitter. Los resultados de 'escuchar' estos comentarios resultan ser bastante curiosos. Aparte de la  información del tiempo que viene en vivo y de boca de personas, lo caótico de nuestro lenguaje hace que a menudo aparezcan resultados inesperados y desternillantes que no siempre tienen que ver con la meteorología.",
+
+  h3 Algunos apuntes técnicos
+  p
+    |Nuublo está siendo construído sobre <strong>Node.js</strong>, el framework Javascript basado en eventos para desarrollo de aplicaciones web. La comunicación en tiempo real cliente-servidor se consigue gracias a <strong>Socket.io</strong>, una API en Javascript que hace posible la implementación de aplicaciones web en tiempo real en navegadores y dispositivos móviles. ",
+
 
 
 

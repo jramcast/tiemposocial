@@ -7,7 +7,7 @@ html
     link(rel='stylesheet', href='/stylesheets/grid.css')
     link(rel='stylesheet', href='/stylesheets/general.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(type='text/javascript', src= 'http://code.jquery.com/jquery.min.js')
+    script(type='text/javascript', src= '/javascripts/jquery-1.7.1.min.js')
     - if (typeof(scripts) != 'undefined')
       each script in scripts 
         script(type='text/javascript', src= script)
@@ -29,15 +29,15 @@ html
           div.row 
             a.logo.col.col_6(href="/")
             div.clear
-        nav.menubar
-          div.row
-            ul.col.col_16 
-              li.first
-                a(href="/")= _t("Volver a la busqueda")
-              li
-                a(href="http://www.itknowingness.com") Blog
-              li
-                a(href="http://jaimeramirez.heroku.com") @jramcast
+          nav.menubar
+            div.row
+              ul.col.col_16 
+                li.first
+                  a(href="/") Volver a la búsqueda
+                li
+                  a(href="http://www.itknowingness.com", target="_blank") Blog
+                li
+                  a(href="http://jaimeramirez.heroku.com", target="_blank") @jramcast
             div.clear
 
     
@@ -47,26 +47,31 @@ html
       footer
         div.row
           div.col.col_5
-            h4= _t("En la cocina")
+            h4 En la cocina
             ul#footer_copyright
               li 
-                a(href="http://jaimeramirez.heroku.com") Jaime Ramírez
-                span= _t(" de ")
-                a(href="http://www.itknowingness.com") ITKnowingness
+                a(href="http://jaimeramirez.heroku.com", target="_blank") Jaime Ramírez 
+                span de 
+                a(href="http://www.itknowingness.com", target="_blank") ITKnowingness
               li 
-                a(href="http://twitter.com/jramcast") @jramcast
+                a(href="http://twitter.com/jramcast", target="_blank") @jramcast
               li
-                a(href="http://twitter.com/itknowingness")@itknowingess
+                a(href="http://twitter.com/itknowingness", target="_blank")@itknowingess
                 
           div.col.col_4
-            h4= _t("Utensilios")
+            h4 Utensilios
             ul#footer_technologies_list
               li
-                a(href="http://nodejs.org/") NodeJS
+                a(href="http://nodejs.org/", target="_blank") NodeJS
               li
-                a(href="http://expressjs.com/") Express
+                a(href="http://expressjs.com/", target="_blank") Express
               li
-                a(href="http://socket.io/") Socket.io
+                a(href="http://socket.io/", target="_blank") Socket.io
           div.col.col_5
-            h4= _t("Ingredientes")
-            p!= _t("footer_data_sources")
+            h4 Ingredientes
+            p 
+            |La 
+            |información sobre localizaciones y estaciones meteorológicas 
+            |viene a través de las APIS de <a target='_blank' href='http://www.wunderground.com'>Weather Undeground</a> 
+            |y <a target='_blank' href='http://www.geonames.org/'>Geonames</a>. 
+            |La Streaming API de Twitter provee los comentarios en tiempo real.
