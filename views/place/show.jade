@@ -1,3 +1,13 @@
+|<div id="fb-root"></div>
+|<script>(function(d, s, id) {
+|  var js, fjs = d.getElementsByTagName(s)[0];
+|  if (d.getElementById(id)) return;
+|  js = d.createElement(s); js.id = id;
+|  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+|  fjs.parentNode.insertBefore(js, fjs);
+|}(document, 'script', 'facebook-jssdk'));</script>
+
+
 div#app_info.box.hide 
   p  Una cosa: Nubloo está en fases tempranas de desarrollo y es posible que tenga comportamientos erróneos. 
     | Os animo a que me hagáis llegar cualquier crítica, sugerencia, apoyo con el desarrollo, o lo que se os ocurra a
@@ -35,7 +45,10 @@ section
       div#weather_observation
     div.row
       h3 Otras estaciones cercanas   
-      ul#weather_stations_list 
-      
+      ul#weather_stations_list
+    div.row
+      h3 Difunde!
+      div#plugins_area
+        |<div class="fb-like-box" data-href="http://www.facebook.com/pages/Nuublo/290554650983657" data-width="320" data-show-faces="true" data-border-color="#efefef" data-stream="false" data-header="true"></div>
 
 

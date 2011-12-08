@@ -43,6 +43,7 @@ process.on('uncaughtException', function (err) {
 
 //Start Server App
 if(!module.parent) {
+	console.log('listening on: ' + process.env.APP_PORT);
 	app.listen(process.env.APP_PORT);
 	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 }

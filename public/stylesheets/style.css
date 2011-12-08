@@ -299,9 +299,9 @@ footer h4 {
 	cursor: pointer;
 	padding: 10px 0px 4px 10px;
 	color: #cecece;	
-	background: #252525;
-	border-bottom: 1px solid #000;
-	border-top: 1px solid #444;
+	background: #202020;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #444;
 	font-size: 1.2em;
 }
 
@@ -318,6 +318,11 @@ footer h4 {
 .weather_station_details li{
 	margin-left: 10px;
 	padding-top: 4px;
+}
+
+#plugins_area {
+	background-color: #efefef;
+	padding: 10px;
 }
 
 #publicationInputArea{
