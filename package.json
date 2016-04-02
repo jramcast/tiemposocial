@@ -1,0 +1,43 @@
+{
+  "name": "tiemposocial",
+  "version": "1.0.0",
+  "description": "Twitter-based weather monitoring",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "connect": "^1.7.1",
+    "connect-redis": "^1.1.0",
+    "express": "^2.4.6",
+    "i18n": "^0.3.0",
+    "jade": "^0.16.0",
+    "mongoose": "^4.4.10",
+    "polyglot": "^0.2.0",
+    "should": "^0.3.1",
+    "socket.io": "^0.8.4",
+    "twitter-node": "^0.0.2"
+  },
+  "devDependencies": {
+    "expresso": "^0.9.0"
+  },
+  "scripts": {
+    "test": "./run_unit_tests",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canduter/tiemposocial.git"
+  },
+  "keywords": [
+    "weather",
+    "twitter",
+    "websockets"
+  ],
+  "author": "Jaime Ramírez Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/canduter/tiemposocial/issues"
+  },
+  "homepage": "https://github.com/canduter/tiemposocial#readme"
+}
