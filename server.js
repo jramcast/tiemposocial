@@ -17,8 +17,8 @@ require('./config/config.js')(app, express);
 var config = {	
 	action: "filter", 
 	track: Common.twitterStreamKeywords,
-	user: "itknowingness",
-	password: "kfu73pKeID"
+	user: "#######",
+	password: "########"
 };
 var twitterNode  = new TwitterNode(config);
 
