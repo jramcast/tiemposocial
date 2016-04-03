@@ -2,7 +2,7 @@
   "name": "tiemposocial",
   "version": "1.0.0",
   "description": "Twitter-based weather monitoring",
-  "main": "server.js",
+  "main": "./run_server.sh",
   "directories": {
     "test": "test"
   },
