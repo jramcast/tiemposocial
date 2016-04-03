@@ -3,7 +3,7 @@ var express = require('express');
 var app = module.exports = express.createServer();
 var Router = require('./lib/router.js');
 var SocketsManager = require('./lib/socketsmanager');
-var TwitterNode = require("twitter-node").TwitterNode;
+var Twitter = require("twitter");
 var Common = require('./lib/common');
 var ClientFactory = require('./lib/clientfactory');
 
@@ -13,17 +13,24 @@ require('./config/config.js')(app, express);
 
 
 ////////// SINGLETONS ///////////////////////////////////////////
-/*Initialize TwitterNode*/
-var config = {	
+/* Initialize Twitter API */
+/*var config = {	
 	action: "filter", 
 	track: Common.twitterStreamKeywords,
 	user: "#######",
 	password: "########"
+};*/
+
+var config = {
+  consumer_key: 'MNOYxcNXehdG2KbU5epzGoDTf',
+  consumer_secret: 't4j6qJ4Pd7aMfs2afN32AWVgatCH6kdvxHh3m9itAud4ziHLML',
+  access_token_key: '52827928-qR2y5T4F2MeExz6Pc0wbI4H4TqTHDVHoSUBUU5FyV',
+  access_token_secret: 'raiXTSFuoSIgc8OwTrxBe8RkPlftIarFfpuf4oWWQBNgV'
 };
-var twitterNode  = new TwitterNode(config);
+var twitterAPI  = new Twitter(config);
 
 /*Initialize Client Factory*/
-var clientFactory = new ClientFactory(twitterNode);
+var clientFactory = new ClientFactory(twitterAPI);
 module.exports.clientFactory = clientFactory;
 
 

@@ -15,8 +15,8 @@
     "mongoose": "^4.4.10",
     "polyglot": "^0.2.0",
     "should": "^0.3.1",
-    "socket.io": "^0.8.4",
-    "twitter-node": "^0.0.2"
+    "socket.io": "^0.8.7",
+    "twitter": "^1.2.5"
   },
   "devDependencies": {
     "expresso": "^0.9.0"
