@@ -44,9 +44,9 @@ var socketManager = SocketsManager.createWithAppReference(app);
 Router.createRoutes(app);
 
 /*catch any exception*/
-process.on('uncaughtException', function (err) {
+/*process.on('uncaughtException', function (err) {
   console.log('Caught exception: ' + err);
-});
+});*/
 
 //Start Server App
 if(!module.parent) {
