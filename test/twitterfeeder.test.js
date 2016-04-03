@@ -2,7 +2,7 @@ var TwitterFeeder = require('../lib/twitterfeeder.js')
 var should = require('./testcommon').should;
 
 
-var config = {user: "jramcast", password: "ninonino83", action: "filter", track: ['spain']};
+var config = {user: "###", password: "###", action: "filter", track: ['spain']};
 
 
 
